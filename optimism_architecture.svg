@@ -1,0 +1,208 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 24px sans-serif; fill: #2563eb; }
+      .subtitle { font: bold 16px sans-serif; fill: #1e40af; }
+      .label { font: 12px sans-serif; fill: #374151; }
+      .contract { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; rx: 8; }
+      .l1-bg { fill: #fef3c7; stroke: #f59e0b; stroke-width: 2; rx: 12; }
+      .l2-bg { fill: #dcfce7; stroke: #16a34a; stroke-width: 2; rx: 12; }
+      .flow-bg { fill: #f3e8ff; stroke: #8b5cf6; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #6b7280; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .bidirectional { stroke: #059669; stroke-width: 3; fill: none; marker-end: url(#arrowhead); marker-start: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6b7280" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" class="title">Optimism Layer 2 架构图</text>
+  
+  <!-- L1 Section -->
+  <rect x="50" y="60" width="500" height="320" class="l1-bg"/>
+  <text x="300" y="85" text-anchor="middle" class="subtitle">L1 (Ethereum Mainnet)</text>
+  
+  <!-- OptimismPortal2 -->
+  <rect x="80" y="100" width="140" height="60" class="contract"/>
+  <text x="150" y="125" text-anchor="middle" class="label">OptimismPortal2</text>
+  <text x="150" y="140" text-anchor="middle" class="label">主要入口点</text>
+  <text x="150" y="155" text-anchor="middle" class="label">存款/提款</text>
+  
+  <!-- L1StandardBridge -->
+  <rect x="240" y="100" width="140" height="60" class="contract"/>
+  <text x="310" y="125" text-anchor="middle" class="label">L1StandardBridge</text>
+  <text x="310" y="140" text-anchor="middle" class="label">资产桥接</text>
+  <text x="310" y="155" text-anchor="middle" class="label">ETH/ERC20</text>
+  
+  <!-- L1CrossDomainMessenger -->
+  <rect x="400" y="100" width="140" height="60" class="contract"/>
+  <text x="470" y="125" text-anchor="middle" class="label">L1CrossDomain</text>
+  <text x="470" y="140" text-anchor="middle" class="label">Messenger</text>
+  <text x="470" y="155" text-anchor="middle" class="label">消息传递</text>
+  
+  <!-- SystemConfig -->
+  <rect x="80" y="180" width="140" height="60" class="contract"/>
+  <text x="150" y="205" text-anchor="middle" class="label">SystemConfig</text>
+  <text x="150" y="220" text-anchor="middle" class="label">系统配置</text>
+  <text x="150" y="235" text-anchor="middle" class="label">参数管理</text>
+  
+  <!-- DisputeGameFactory -->
+  <rect x="240" y="180" width="140" height="60" class="contract"/>
+  <text x="310" y="205" text-anchor="middle" class="label">DisputeGameFactory</text>
+  <text x="310" y="220" text-anchor="middle" class="label">争议游戏工厂</text>
+  <text x="310" y="235" text-anchor="middle" class="label">创建争议游戏</text>
+  
+  <!-- FaultDisputeGame -->
+  <rect x="400" y="180" width="140" height="60" class="contract"/>
+  <text x="470" y="205" text-anchor="middle" class="label">FaultDisputeGame</text>
+  <text x="470" y="220" text-anchor="middle" class="label">错误争议游戏</text>
+  <text x="470" y="235" text-anchor="middle" class="label">交互式证明</text>
+  
+  <!-- AnchorStateRegistry -->
+  <rect x="80" y="260" width="140" height="60" class="contract"/>
+  <text x="150" y="285" text-anchor="middle" class="label">AnchorStateRegistry</text>
+  <text x="150" y="300" text-anchor="middle" class="label">锚定状态注册</text>
+  <text x="150" y="315" text-anchor="middle" class="label">状态根管理</text>
+  
+  <!-- ETHLockbox -->
+  <rect x="240" y="260" width="140" height="60" class="contract"/>
+  <text x="310" y="285" text-anchor="middle" class="label">ETHLockbox</text>
+  <text x="310" y="300" text-anchor="middle" class="label">ETH锁定盒</text>
+  <text x="310" y="315" text-anchor="middle" class="label">资金托管</text>
+  
+  <!-- SuperchainConfig -->
+  <rect x="400" y="260" width="140" height="60" class="contract"/>
+  <text x="470" y="285" text-anchor="middle" class="label">SuperchainConfig</text>
+  <text x="470" y="300" text-anchor="middle" class="label">超级链配置</text>
+  <text x="470" y="315" text-anchor="middle" class="label">全局设置</text>
+  
+  <!-- L2 Section -->
+  <rect x="650" y="60" width="500" height="320" class="l2-bg"/>
+  <text x="900" y="85" text-anchor="middle" class="subtitle">L2 (Optimism Network)</text>
+  
+  <!-- L2StandardBridge -->
+  <rect x="680" y="100" width="140" height="60" class="contract"/>
+  <text x="750" y="125" text-anchor="middle" class="label">L2StandardBridge</text>
+  <text x="750" y="140" text-anchor="middle" class="label">L2资产桥接</text>
+  <text x="750" y="155" text-anchor="middle" class="label">接收/发送资产</text>
+  
+  <!-- L2CrossDomainMessenger -->
+  <rect x="840" y="100" width="140" height="60" class="contract"/>
+  <text x="910" y="125" text-anchor="middle" class="label">L2CrossDomain</text>
+  <text x="910" y="140" text-anchor="middle" class="label">Messenger</text>
+  <text x="910" y="155" text-anchor="middle" class="label">L2消息传递</text>
+  
+  <!-- OptimismMintableERC20 -->
+  <rect x="1000" y="100" width="140" height="60" class="contract"/>
+  <text x="1070" y="125" text-anchor="middle" class="label">OptimismMintable</text>
+  <text x="1070" y="140" text-anchor="middle" class="label">ERC20</text>
+  <text x="1070" y="155" text-anchor="middle" class="label">可铸造代币</text>
+  
+  <!-- Predeploys -->
+  <rect x="680" y="180" width="140" height="60" class="contract"/>
+  <text x="750" y="205" text-anchor="middle" class="label">Predeploys</text>
+  <text x="750" y="220" text-anchor="middle" class="label">预部署合约</text>
+  <text x="750" y="235" text-anchor="middle" class="label">系统合约</text>
+  
+  <!-- L2ToL1MessagePasser -->
+  <rect x="840" y="180" width="140" height="60" class="contract"/>
+  <text x="910" y="205" text-anchor="middle" class="label">L2ToL1Message</text>
+  <text x="910" y="220" text-anchor="middle" class="label">Passer</text>
+  <text x="910" y="235" text-anchor="middle" class="label">消息传递器</text>
+  
+  <!-- GasPriceOracle -->
+  <rect x="1000" y="180" width="140" height="60" class="contract"/>
+  <text x="1070" y="205" text-anchor="middle" class="label">GasPriceOracle</text>
+  <text x="1070" y="220" text-anchor="middle" class="label">Gas价格预言机</text>
+  <text x="1070" y="235" text-anchor="middle" class="label">费用计算</text>
+  
+  <!-- Core Processes Section -->
+  <rect x="200" y="420" width="800" height="320" class="flow-bg"/>
+  <text x="600" y="445" text-anchor="middle" class="subtitle">核心流程</text>
+  
+  <!-- Deposit Flow -->
+  <rect x="230" y="470" width="160" height="80" class="contract"/>
+  <text x="310" y="495" text-anchor="middle" class="label">存款流程</text>
+  <text x="310" y="510" text-anchor="middle" class="label">1. 用户发起存款</text>
+  <text x="310" y="525" text-anchor="middle" class="label">2. 锁定L1资产</text>
+  <text x="310" y="540" text-anchor="middle" class="label">3. L2铸造代币</text>
+  
+  <!-- Withdrawal Flow -->
+  <rect x="420" y="470" width="160" height="80" class="contract"/>
+  <text x="500" y="495" text-anchor="middle" class="label">提款流程</text>
+  <text x="500" y="510" text-anchor="middle" class="label">1. L2发起提款</text>
+  <text x="500" y="525" text-anchor="middle" class="label">2. 等待挑战期</text>
+  <text x="500" y="540" text-anchor="middle" class="label">3. L1完成提款</text>
+  
+  <!-- Message Passing -->
+  <rect x="610" y="470" width="160" height="80" class="contract"/>
+  <text x="690" y="495" text-anchor="middle" class="label">消息传递</text>
+  <text x="690" y="510" text-anchor="middle" class="label">1. 发送消息</text>
+  <text x="690" y="525" text-anchor="middle" class="label">2. 跨链传输</text>
+  <text x="690" y="540" text-anchor="middle" class="label">3. 目标链执行</text>
+  
+  <!-- Dispute Resolution -->
+  <rect x="800" y="470" width="160" height="80" class="contract"/>
+  <text x="880" y="495" text-anchor="middle" class="label">争议解决</text>
+  <text x="880" y="510" text-anchor="middle" class="label">1. 发起挑战</text>
+  <text x="880" y="525" text-anchor="middle" class="label">2. 交互式证明</text>
+  <text x="880" y="540" text-anchor="middle" class="label">3. 确定结果</text>
+  
+  <!-- State Commitment -->
+  <rect x="230" y="580" width="160" height="80" class="contract"/>
+  <text x="310" y="605" text-anchor="middle" class="label">状态承诺</text>
+  <text x="310" y="620" text-anchor="middle" class="label">1. L2状态更新</text>
+  <text x="310" y="635" text-anchor="middle" class="label">2. 生成状态根</text>
+  <text x="310" y="650" text-anchor="middle" class="label">3. 提交到L1</text>
+  
+  <!-- Fraud Proof -->
+  <rect x="420" y="580" width="160" height="80" class="contract"/>
+  <text x="500" y="605" text-anchor="middle" class="label">欺诈证明</text>
+  <text x="500" y="620" text-anchor="middle" class="label">1. 检测错误状态</text>
+  <text x="500" y="635" text-anchor="middle" class="label">2. 提交证明</text>
+  <text x="500" y="650" text-anchor="middle" class="label">3. 回滚状态</text>
+  
+  <!-- Sequencer -->
+  <rect x="610" y="580" width="160" height="80" class="contract"/>
+  <text x="690" y="605" text-anchor="middle" class="label">排序器</text>
+  <text x="690" y="620" text-anchor="middle" class="label">1. 收集交易</text>
+  <text x="690" y="635" text-anchor="middle" class="label">2. 排序打包</text>
+  <text x="690" y="650" text-anchor="middle" class="label">3. 批量提交</text>
+  
+  <!-- Verifier -->
+  <rect x="800" y="580" width="160" height="80" class="contract"/>
+  <text x="880" y="605" text-anchor="middle" class="label">验证器</text>
+  <text x="880" y="620" text-anchor="middle" class="label">1. 验证交易</text>
+  <text x="880" y="635" text-anchor="middle" class="label">2. 检查状态</text>
+  <text x="880" y="650" text-anchor="middle" class="label">3. 发起挑战</text>
+  
+  <!-- Arrows -->
+  <!-- L1 internal connections -->
+  <line x1="220" y1="130" x2="240" y2="130" class="arrow"/>
+  <line x1="380" y1="130" x2="400" y2="130" class="arrow"/>
+  <line x1="150" y1="160" x2="150" y2="180" class="arrow"/>
+  <line x1="310" y1="160" x2="310" y2="180" class="arrow"/>
+  <line x1="310" y1="240" x2="400" y2="210" class="arrow"/>
+  <line x1="150" y1="240" x2="150" y2="260" class="arrow"/>
+  <line x1="310" y1="240" x2="310" y2="260" class="arrow"/>
+  
+  <!-- L1-L2 bidirectional connections -->
+  <line x1="380" y1="130" x2="680" y2="130" class="bidirectional"/>
+  <line x1="540" y1="130" x2="840" y2="130" class="bidirectional"/>
+  
+  <!-- L2 internal connections -->
+  <line x1="820" y1="130" x2="840" y2="130" class="arrow"/>
+  <line x1="980" y1="130" x2="1000" y2="130" class="arrow"/>
+  <line x1="750" y1="160" x2="750" y2="180" class="arrow"/>
+  <line x1="910" y1="160" x2="910" y2="180" class="arrow"/>
+  
+  <!-- Flow connections -->
+  <line x1="150" y1="320" x2="310" y2="470" class="arrow"/>
+  <line x1="310" y1="320" x2="500" y2="470" class="arrow"/>
+  <line x1="470" y1="320" x2="690" y2="470" class="arrow"/>
+  <line x1="470" y1="240" x2="880" y2="470" class="arrow"/>
+  
+  <!-- Security Features -->
+  <text x="600" y="780" text-anchor="middle" class="subtitle">安全特性: 7天挑战期 | 交互式欺诈证明 | 经济激励机制 | 多重验证</text>
+</svg>
